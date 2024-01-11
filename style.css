@@ -104,45 +104,61 @@ form label {
   z-index: -1;
   top: 0;
   left: 0;
-  animation: fly 10s infinite;
+  animation: fly 15s infinite;
+}
+.cat {
+  top: 0;
+  left: -10%;
 }
 
 @keyframes fly {
-  0{
-    left: 0;
+  0 {
+    left: -10%;
     top: 0;
   }
-  5%{
-    transform: translate(0, 0) rotate(90deg);
+  23% {
+    left: 110%;
+    top: 0;
+    transform: translate(-100%, 0);
   }
-  25%{
-    left: 100%;
+
+  25% {
+    left: 110%;
     top: 0;
     transform: translate(-100%, 0) rotate(90deg);
   }
-  30%{
-    transform: translate(-100%, 0) rotate(180deg);
+
+  48% {
+    left: 110%;
+    top: 115%;
+    transform: translate(-100%, -100%) rotate(90deg);
   }
-  50%{
-    left: 100%;
-    top: 100%;
+
+  50% {
+    left: 110%;
+    top: 115%;
     transform: translate(-100%, -100%) rotate(180deg);
   }
-  55%{
-    transform: translate(-100%, -100%) rotate(270deg);
+  73% {
+    left: -10%;
+    top: 115%;
+    transform: translate(0, -100%) rotate(180deg);
   }
-  75%{
-    left: 0;
-    top: 100%;
+  75% {
+    left: -10%;
+    top: 115%;
     transform: translate(0, -100%) rotate(270deg);
   }
-  80%{
-    transform: translate(0, -100%) rotate(360deg);
-  }
-  100%{
-    left: 0;
+
+  98% {
+    left: -10%;
     top: 0;
-    transform: translate(0, 0) rotate(360deg);
+    transform: rotate(270deg);
+  }
+  100% {
+    left: -10%;
+    top: 0;
+    transform: rotate(360deg);
   }
 }
 
@@ -186,11 +202,65 @@ form label {
     flex-direction: column;
     gap: 10px;
   }
+  .cat {
+    top: 0;
+    left: 5%;
+  }
+  @keyframes fly {
+    0 {
+      left: 5%;
+      top: 0;
+    }
+    23% {
+      left: 95%;
+      top: 0;
+      transform: translate(-100%, 0);
+    }
+
+    25% {
+      left: 95%;
+      top: 10%;
+      transform: translate(-100%, 0) rotate(90deg);
+    }
+
+    48% {
+      left: 95%;
+      top: 90%;
+      transform: translate(-100%, -100%) rotate(90deg);
+    }
+
+    50% {
+      left: 95%;
+      top: 90%;
+      transform: translate(-100%, -100%) rotate(180deg);
+    }
+    73% {
+      left: 5%;
+      top: 90%;
+      transform: translate(0, -100%) rotate(180deg);
+    }
+    75% {
+      left: 5%;
+      top: 90%;
+      transform: translate(0, -100%) rotate(270deg);
+    }
+
+    99% {
+      left: 5%;
+      top: 0;
+      transform: rotate(270deg);
+    }
+    100% {
+      left: 5%;
+      top: 0;
+      transform: rotate(360deg);
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
   form {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -200,13 +270,124 @@ form label {
     display: block;
     margin: 5px auto;
   }
+
+  .cat {
+    top: 5%;
+    left: 5%;
+  }
+
+  @keyframes fly {
+    0 {
+      left: 5%;
+      top: 5%;
+    }
+    23% {
+      left: 90%;
+      top: 5%;
+      transform: translate(-100%, 0);
+    }
+
+    25% {
+      left: 90%;
+      top: 5%;
+      transform: translate(-100%, 0) rotate(90deg);
+    }
+
+    48% {
+      left: 90%;
+      top: 115%;
+      transform: translate(-100%, -100%) rotate(90deg);
+    }
+
+    50% {
+      left: 90%;
+      top: 115%;
+      transform: translate(-100%, -100%) rotate(180deg);
+    }
+    73% {
+      left: 5%;
+      top: 115%;
+      transform: translate(0, -100%) rotate(180deg);
+    }
+    75% {
+      left: 5%;
+      top: 115%;
+      transform: translate(0, -100%) rotate(270deg);
+    }
+
+    98% {
+      left: 5%;
+      top: 5%;
+      transform: rotate(270deg);
+    }
+    100% {
+      left: 5%;
+      top: 5%;
+      transform: rotate(360deg);
+    }
+  }
 }
 @media only screen and (min-width: 1024px) {
   h1 {
     font-size: 20px;
+    margin-top: 50px;
   }
   .password {
     display: flex;
     flex-direction: column;
+  }
+  .cat {
+    top: -2%;
+    left: 25%;
+  }
+  @keyframes fly {
+    0 {
+      left: 25%;
+      top: -2%;
+    }
+    23% {
+      left: 75%;
+      top: -2%;
+      transform: translate(-100%, 0);
+    }
+
+    25% {
+      left: 75%;
+      top: -2%;
+      transform: translate(-100%, 0) rotate(90deg);
+    }
+
+    48% {
+      left: 75%;
+      top: 105%;
+      transform: translate(-100%, -100%) rotate(90deg);
+    }
+
+    50% {
+      left: 75%;
+      top: 105%;
+      transform: translate(-100%, -100%) rotate(180deg);
+    }
+    73% {
+      left: 25%;
+      top: 105%;
+      transform: translate(0, -100%) rotate(180deg);
+    }
+    75% {
+      left: 25%;
+      top: 105%;
+      transform: translate(0, -100%) rotate(270deg);
+    }
+
+    98% {
+      left: 25%;
+      top: -2%;
+      transform: rotate(270deg);
+    }
+    100% {
+      left: 25%;
+      top: -2%;
+      transform: rotate(360deg);
+    }
   }
 }
